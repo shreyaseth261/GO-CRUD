@@ -10,8 +10,8 @@ func PostCreate(c *gin.Context) {
 
 	//populate data from body of req
 	var body struct {
-		Body string
-		Title string
+		Body  string `json:"body"`
+		Title string `json:"title"`
 	}
 
 	c.Bind(&body)
